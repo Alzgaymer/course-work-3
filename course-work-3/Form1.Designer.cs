@@ -28,97 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pMemory = new System.Windows.Forms.ProgressBar();
-            this.pCPU = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.btCPU = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btMemory = new System.Windows.Forms.Button();
+            this.btGPU = new System.Windows.Forms.Button();
+            this.pbar = new System.Windows.Forms.ProgressBar();
+            this.lCPU = new System.Windows.Forms.Label();
+            this.lName = new System.Windows.Forms.Label();
+            this.lClock = new System.Windows.Forms.Label();
+            this.lAmount = new System.Windows.Forms.Label();
+            this.lCache = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chart1
+            // btCPU
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(216, 218);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "CPU";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Memory";
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(367, 311);
-            this.chart1.TabIndex = 4;
+            this.btCPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCPU.Location = new System.Drawing.Point(3, 3);
+            this.btCPU.Name = "btCPU";
+            this.btCPU.Size = new System.Drawing.Size(113, 67);
+            this.btCPU.TabIndex = 5;
+            this.btCPU.Text = "CPU";
+            this.btCPU.UseVisualStyleBackColor = true;
+            this.btCPU.Click += new System.EventHandler(this.btCPU_Click);
             // 
-            // pMemory
+            // flowLayoutPanel1
             // 
-            this.pMemory.Location = new System.Drawing.Point(206, 160);
-            this.pMemory.Name = "pMemory";
-            this.pMemory.Size = new System.Drawing.Size(427, 31);
-            this.pMemory.TabIndex = 3;
+            this.flowLayoutPanel1.Controls.Add(this.btCPU);
+            this.flowLayoutPanel1.Controls.Add(this.btMemory);
+            this.flowLayoutPanel1.Controls.Add(this.btGPU);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 34);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(151, 296);
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // pCPU
+            // btMemory
             // 
-            this.pCPU.Location = new System.Drawing.Point(206, 103);
-            this.pCPU.Name = "pCPU";
-            this.pCPU.Size = new System.Drawing.Size(427, 31);
-            this.pCPU.TabIndex = 1;
+            this.btMemory.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMemory.Location = new System.Drawing.Point(3, 76);
+            this.btMemory.Name = "btMemory";
+            this.btMemory.Size = new System.Drawing.Size(113, 67);
+            this.btMemory.TabIndex = 7;
+            this.btMemory.Text = "Memory";
+            this.btMemory.UseVisualStyleBackColor = true;
+            this.btMemory.Click += new System.EventHandler(this.btMemory_Click);
             // 
-            // label1
+            // btGPU
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CPU";
+            this.btGPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGPU.Location = new System.Drawing.Point(3, 149);
+            this.btGPU.Name = "btGPU";
+            this.btGPU.Size = new System.Drawing.Size(113, 67);
+            this.btGPU.TabIndex = 8;
+            this.btGPU.Text = "GPU";
+            this.btGPU.UseVisualStyleBackColor = true;
+            this.btGPU.Click += new System.EventHandler(this.btGPU_Click);
             // 
-            // label2
+            // pbar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 31);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Memory";
+            this.pbar.Location = new System.Drawing.Point(195, 37);
+            this.pbar.Name = "pbar";
+            this.pbar.Size = new System.Drawing.Size(396, 30);
+            this.pbar.TabIndex = 7;
+            // 
+            // lCPU
+            // 
+            this.lCPU.AutoSize = true;
+            this.lCPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCPU.Location = new System.Drawing.Point(608, 34);
+            this.lCPU.Name = "lCPU";
+            this.lCPU.Size = new System.Drawing.Size(0, 43);
+            this.lCPU.TabIndex = 8;
+            // 
+            // lName
+            // 
+            this.lName.AutoSize = true;
+            this.lName.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lName.Location = new System.Drawing.Point(192, 86);
+            this.lName.Name = "lName";
+            this.lName.Size = new System.Drawing.Size(64, 43);
+            this.lName.TabIndex = 9;
+            this.lName.Text = "label1";
+            // 
+            // lClock
+            // 
+            this.lClock.AutoSize = true;
+            this.lClock.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lClock.Location = new System.Drawing.Point(192, 129);
+            this.lClock.Name = "lClock";
+            this.lClock.Size = new System.Drawing.Size(64, 43);
+            this.lClock.TabIndex = 10;
+            this.lClock.Text = "label1";
+            // 
+            // lAmount
+            // 
+            this.lAmount.AutoSize = true;
+            this.lAmount.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAmount.Location = new System.Drawing.Point(192, 172);
+            this.lAmount.Name = "lAmount";
+            this.lAmount.Size = new System.Drawing.Size(64, 43);
+            this.lAmount.TabIndex = 11;
+            this.lAmount.Text = "label1";
+            // 
+            // lCache
+            // 
+            this.lCache.AutoSize = true;
+            this.lCache.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCache.Location = new System.Drawing.Point(556, 86);
+            this.lCache.Name = "lCache";
+            this.lCache.Size = new System.Drawing.Size(64, 43);
+            this.lCache.TabIndex = 12;
+            this.lCache.Text = "label1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 541);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.pMemory);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pCPU);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(800, 344);
+            this.Controls.Add(this.lCache);
+            this.Controls.Add(this.lAmount);
+            this.Controls.Add(this.lClock);
+            this.Controls.Add(this.lName);
+            this.Controls.Add(this.lCPU);
+            this.Controls.Add(this.pbar);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Font = new System.Drawing.Font("Ink Free", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Text = "Resource monitor";
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.ProgressBar pMemory;
-        private System.Windows.Forms.ProgressBar pCPU;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btCPU;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btMemory;
+        private System.Windows.Forms.ProgressBar pbar;
+        private System.Windows.Forms.Label lCPU;
+        private System.Windows.Forms.Button btGPU;
+        private System.Windows.Forms.Label lName;
+        private System.Windows.Forms.Label lClock;
+        private System.Windows.Forms.Label lAmount;
+        private System.Windows.Forms.Label lCache;
     }
 }
 
