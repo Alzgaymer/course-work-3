@@ -98,7 +98,7 @@ namespace course_work_3
         private static int GetCpuValue()
         {            
             cpu.NextValue();
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(1000);
             return (int)cpu.NextValue(); 
         }
         private static int GetMemValue()

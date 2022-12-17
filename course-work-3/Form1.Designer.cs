@@ -43,6 +43,7 @@
             // 
             // btCPU
             // 
+            this.btCPU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCPU.Location = new System.Drawing.Point(3, 3);
             this.btCPU.Name = "btCPU";
@@ -59,11 +60,12 @@
             this.flowLayoutPanel1.Controls.Add(this.btGPU);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 34);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(151, 296);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(121, 229);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // btMemory
             // 
+            this.btMemory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMemory.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMemory.Location = new System.Drawing.Point(3, 76);
             this.btMemory.Name = "btMemory";
@@ -75,6 +77,7 @@
             // 
             // btGPU
             // 
+            this.btGPU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGPU.Location = new System.Drawing.Point(3, 149);
             this.btGPU.Name = "btGPU";
@@ -146,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 344);
+            this.ClientSize = new System.Drawing.Size(800, 275);
             this.Controls.Add(this.lCache);
             this.Controls.Add(this.lAmount);
             this.Controls.Add(this.lClock);
