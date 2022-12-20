@@ -71,6 +71,7 @@ namespace course_work_3
                 default:
                     break;
             }
+            
         }
         void LabelInvoke(Label l, string value)
         {
@@ -104,6 +105,13 @@ namespace course_work_3
         private void btGPU_Click(object sender, EventArgs e)
         {
             state = State.GPU;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var about = new AboutForm();
+            
+            about.ShowDialog();
         }
     }
 }

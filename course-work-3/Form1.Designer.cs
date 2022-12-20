@@ -40,9 +40,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btCPU
@@ -61,7 +64,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btCPU);
             this.flowLayoutPanel1.Controls.Add(this.btMemory);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 34);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 53);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(121, 209);
             this.flowLayoutPanel1.TabIndex = 6;
@@ -80,7 +83,7 @@
             // 
             // pbar
             // 
-            this.pbar.Location = new System.Drawing.Point(195, 37);
+            this.pbar.Location = new System.Drawing.Point(195, 56);
             this.pbar.Name = "pbar";
             this.pbar.Size = new System.Drawing.Size(396, 30);
             this.pbar.TabIndex = 7;
@@ -89,7 +92,7 @@
             // 
             this.lCPU.AutoSize = true;
             this.lCPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCPU.Location = new System.Drawing.Point(608, 34);
+            this.lCPU.Location = new System.Drawing.Point(608, 53);
             this.lCPU.Name = "lCPU";
             this.lCPU.Size = new System.Drawing.Size(0, 43);
             this.lCPU.TabIndex = 8;
@@ -139,7 +142,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 9);
+            this.label1.Location = new System.Drawing.Point(195, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 29);
             this.label1.TabIndex = 13;
@@ -150,7 +153,7 @@
             this.panel1.Controls.Add(this.lName);
             this.panel1.Controls.Add(this.lClock);
             this.panel1.Controls.Add(this.lAmount);
-            this.panel1.Location = new System.Drawing.Point(169, 91);
+            this.panel1.Location = new System.Drawing.Point(169, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 152);
             this.panel1.TabIndex = 14;
@@ -158,10 +161,27 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.lCache);
-            this.panel2.Location = new System.Drawing.Point(597, 91);
+            this.panel2.Location = new System.Drawing.Point(597, 110);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 100);
             this.panel2.TabIndex = 15;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(874, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -176,8 +196,10 @@
             this.Controls.Add(this.pbar);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Ink Free", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Resource monitor";
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -185,6 +207,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +227,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
