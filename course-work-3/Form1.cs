@@ -17,7 +17,7 @@ namespace course_work_3
         static System.Timers.Timer _timer;
         static readonly PerformanceCounter memory = new PerformanceCounter("Memory", "% Committed Bytes In Use");
         static readonly PerformanceCounter cpu = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-        static readonly PerformanceCounter gpu = new PerformanceCounter("GPU Local Adapter Memory", "Local Usage", "luid_0x00000000_0x0000F973_phys_0");
+        
         static readonly ManagementObjectSearcher searcherCPU = new ManagementObjectSearcher("select * from win32_processor");
         static readonly ManagementObjectSearcher searcherMemory = new ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMemory");
         static readonly ManagementObjectSearcher searcherGPU = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController");
@@ -34,8 +34,8 @@ namespace course_work_3
         {
             int cpu = GetCpuValue();
             int memory = GetMemValue();
-            int gpu = GetGpuMemValue() / 20000000;
-;
+            
+
             ManagementObjectCollection objects = null;
             switch (state)
             {
@@ -49,7 +49,7 @@ namespace course_work_3
                         lCache.Text = "L2 cache size: " + int.Parse(item.GetPropertyValue("L2CacheSize").ToString())/1000 + " Mbytes";
                         lCache.Text += "\nL3 cache size: " + int.Parse(item.GetPropertyValue("L3CacheSize").ToString()) / 1000 + " Mbytes";
                     }
-                    
+                    label1.Text = "Processor time";
                     ProgressBarInvoke(pbar, cpu);
                     LabelInvoke(lCPU, $"{cpu}%");
                     break;
@@ -64,23 +64,10 @@ namespace course_work_3
                     }
                     lAmount.Text = "Total: " + String.Format($"{(amount / 1000000000).ToString():F4}") + "GB";
                     lCache.Text = "";
+                    label1.Text = "Committed bytes in use";
                     ProgressBarInvoke(pbar, memory);
                     LabelInvoke(lCPU, $"{memory}%");
-                    break;
-                case State.GPU:
-                    objects = searcherGPU.Get();
-                    foreach (var item in objects)
-                    {
-                        lName.Text = item.GetPropertyValue("Name").ToString();
-                        lClock.Text = "Video Processor: " + item.GetPropertyValue("VideoProcessor");
-                        lAmount.Text = "Total Adapter RAM: " + long.Parse(item.GetPropertyValue("AdapterRAM").ToString())/1000000000 + " GB";                        
-                    }
-                    lCache.Text = "";
-                   
-
-                    ProgressBarInvoke(pbar, gpu);
-                    LabelInvoke(lCPU, $"{gpu}%");
-                    break;
+                    break;                
                 default:
                     break;
             }
@@ -105,12 +92,7 @@ namespace course_work_3
         {            
             memory.NextValue();            
             return (int)memory.NextValue(); 
-        }
-        private static int GetGpuMemValue()
-        {            
-            gpu.NextValue();            
-            return (int)gpu.NextValue(); 
-        }
+        }       
         private void btCPU_Click(object sender, EventArgs e)
         {
             state = State.CPU;

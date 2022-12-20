@@ -31,13 +31,13 @@
             this.btCPU = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btMemory = new System.Windows.Forms.Button();
-            this.btGPU = new System.Windows.Forms.Button();
             this.pbar = new System.Windows.Forms.ProgressBar();
             this.lCPU = new System.Windows.Forms.Label();
             this.lName = new System.Windows.Forms.Label();
             this.lClock = new System.Windows.Forms.Label();
             this.lAmount = new System.Windows.Forms.Label();
             this.lCache = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +57,9 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btCPU);
             this.flowLayoutPanel1.Controls.Add(this.btMemory);
-            this.flowLayoutPanel1.Controls.Add(this.btGPU);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 34);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(121, 229);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(121, 209);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // btMemory
@@ -71,21 +70,9 @@
             this.btMemory.Name = "btMemory";
             this.btMemory.Size = new System.Drawing.Size(113, 67);
             this.btMemory.TabIndex = 7;
-            this.btMemory.Text = "Memory";
+            this.btMemory.Text = "RAM";
             this.btMemory.UseVisualStyleBackColor = true;
             this.btMemory.Click += new System.EventHandler(this.btMemory_Click);
-            // 
-            // btGPU
-            // 
-            this.btGPU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGPU.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGPU.Location = new System.Drawing.Point(3, 149);
-            this.btGPU.Name = "btGPU";
-            this.btGPU.Size = new System.Drawing.Size(113, 67);
-            this.btGPU.TabIndex = 8;
-            this.btGPU.Text = "GPU";
-            this.btGPU.UseVisualStyleBackColor = true;
-            this.btGPU.Click += new System.EventHandler(this.btGPU_Click);
             // 
             // pbar
             // 
@@ -143,6 +130,17 @@
             this.lCache.TabIndex = 12;
             this.lCache.Text = "label1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Javanese Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(195, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 29);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Processor time";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -157,6 +155,7 @@
             this.Controls.Add(this.lCPU);
             this.Controls.Add(this.pbar);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Ink Free", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
@@ -173,11 +172,11 @@
         private System.Windows.Forms.Button btMemory;
         private System.Windows.Forms.ProgressBar pbar;
         private System.Windows.Forms.Label lCPU;
-        private System.Windows.Forms.Button btGPU;
         private System.Windows.Forms.Label lName;
         private System.Windows.Forms.Label lClock;
         private System.Windows.Forms.Label lAmount;
         private System.Windows.Forms.Label lCache;
+        private System.Windows.Forms.Label label1;
     }
 }
 
