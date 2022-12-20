@@ -38,7 +38,11 @@
             this.lAmount = new System.Windows.Forms.Label();
             this.lCache = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btCPU
@@ -94,7 +98,7 @@
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(192, 86);
+            this.lName.Location = new System.Drawing.Point(15, 10);
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(64, 43);
             this.lName.TabIndex = 9;
@@ -104,7 +108,7 @@
             // 
             this.lClock.AutoSize = true;
             this.lClock.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lClock.Location = new System.Drawing.Point(192, 129);
+            this.lClock.Location = new System.Drawing.Point(15, 53);
             this.lClock.Name = "lClock";
             this.lClock.Size = new System.Drawing.Size(64, 43);
             this.lClock.TabIndex = 10;
@@ -114,7 +118,7 @@
             // 
             this.lAmount.AutoSize = true;
             this.lAmount.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAmount.Location = new System.Drawing.Point(192, 172);
+            this.lAmount.Location = new System.Drawing.Point(15, 96);
             this.lAmount.Name = "lAmount";
             this.lAmount.Size = new System.Drawing.Size(64, 43);
             this.lAmount.TabIndex = 11;
@@ -124,7 +128,7 @@
             // 
             this.lCache.AutoSize = true;
             this.lCache.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCache.Location = new System.Drawing.Point(556, 86);
+            this.lCache.Location = new System.Drawing.Point(0, 0);
             this.lCache.Name = "lCache";
             this.lCache.Size = new System.Drawing.Size(64, 43);
             this.lCache.TabIndex = 12;
@@ -141,17 +145,33 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Processor time";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lName);
+            this.panel1.Controls.Add(this.lClock);
+            this.panel1.Controls.Add(this.lAmount);
+            this.panel1.Location = new System.Drawing.Point(169, 91);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(422, 152);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lCache);
+            this.panel2.Location = new System.Drawing.Point(597, 91);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 100);
+            this.panel2.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 275);
-            this.Controls.Add(this.lCache);
-            this.Controls.Add(this.lAmount);
-            this.Controls.Add(this.lClock);
-            this.Controls.Add(this.lName);
+            this.ClientSize = new System.Drawing.Size(874, 275);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lCPU);
             this.Controls.Add(this.pbar);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -161,6 +181,10 @@
             this.Name = "Form1";
             this.Text = "Resource monitor";
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +201,8 @@
         private System.Windows.Forms.Label lAmount;
         private System.Windows.Forms.Label lCache;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
